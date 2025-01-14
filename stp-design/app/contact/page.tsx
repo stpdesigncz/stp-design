@@ -101,13 +101,13 @@ const Contact = () => {
                 }}
               >
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.494206637786!2d18.171941076256105!3d49.84419527939544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713eec4ad34b3d7%3A0x6d4505d5674b85ff!2sN%C3%A1m%C4%9Bst%C3%AD%20V%C3%A1clava%20Vacka%2013%2C%20708%2000%20Ostrava-Poruba!5e0!3m2!1sen!2scz!4v1672509562450!5m2!1sen!2scz"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2572.6146247111164!2d18.179722675913773!3d49.849698230437916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713e1615f0626a3%3A0xda3dfcad1b49e58c!2sNa%20Svobod%C4%9B%203139%2F1%2C%20723%2000%20Ostrava%2023!5e0!3m2!1scs!2scz!4v1736865656834!5m2!1scs!2scz"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
                   allowFullScreen={false}
                   loading="lazy"
-                  title="Google Map - Náměstí Václava Vacka 13"
+                  title="Google Map - Na Svobodě 3139/1"
                 ></iframe>
               </div>
             </div>
@@ -197,3 +197,6 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+
