@@ -63,7 +63,7 @@ const GalleryPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Photography Gallery */}
+          {/* Photography Gallery - */}
           <section>
             <h1 className="text-3xl text-gray-800 text-center mb-8 font-poppins">
               Galerie fotografií
