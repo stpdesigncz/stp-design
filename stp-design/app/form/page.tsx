@@ -61,9 +61,6 @@ const RequestFormPage = () => {
     }
   };
 
-  const formatFileName = (fileName: string) => {
-    return fileName.replace(/\.jfif$/i, '.jpg');
-  };
 
   return (
     <div>
