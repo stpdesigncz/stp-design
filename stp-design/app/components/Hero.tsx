@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+
 
 const Hero: React.FC = () => {
   return (
@@ -13,22 +15,26 @@ const Hero: React.FC = () => {
         {/* Kulaté fotky s jmény a popisem */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">
           <div className="text-center">
-            <img
-              src="/owner1.png" // Nahraď správnou cestou k fotce
-              alt="Majitelka 1"
-              className="w-32 h-32 rounded-full mx-auto"
-            />
+                <Image 
+                  src="/owner1.png" // Replace with correct image path
+                  alt="Majitel 1"
+                  className="w-32 h-32 rounded-full mx-auto"
+                  width={200}
+                  height={200}
+                />
             <p className="mt-4 font-semibold text-gray-800">Pavla Stebelaková</p>
             <p className="text-gray-600 mt-2 text-sm">
               Specialistka na marketing a komunikaci.
             </p>
           </div>
           <div className="text-center">
-            <img
-              src="/owner2.png" // Nahraď správnou cestou k fotce
-              alt="Majitelka 2"
-              className="w-32 h-32 rounded-full mx-auto"
-            />
+               <Image 
+                  src="/owner2.png" // Replace with correct image path
+                  alt="Majitel 2"
+                  className="w-32 h-32 rounded-full mx-auto"
+                  width={200}
+                  height={200}
+                />
             <p className="mt-4 font-semibold text-gray-800">Zuzana Horutová</p>
             <p className="text-gray-600 mt-2 text-sm">
               Expertka na design a vizuální prezentaci.

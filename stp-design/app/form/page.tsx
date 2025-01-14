@@ -139,22 +139,7 @@ const RequestFormPage = () => {
               className="w-full border rounded px-4 py-2 placeholder-gray-500"
             ></textarea>
           </div>
-          <div>
-            <input
-              type="file"
-              id="files"
-              name="files"
-              multiple
-              onChange={handleFileChange}
-              className="w-full"
-            />
-            <div className="text-sm text-gray-600 mt-2">
-              {formData.files.length > 0 &&
-                (formData.files.length <= 3
-                  ? formData.files.map((file) => formatFileName(file.name)).join(', ')
-                  : `${formData.files.slice(0, 3).map((file) => formatFileName(file.name)).join(', ')},...`)}
-            </div>
-          </div>
+          
           <button
             type="submit"
             className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"

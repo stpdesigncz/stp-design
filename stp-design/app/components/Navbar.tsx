@@ -11,7 +11,12 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white p-4 z-50 shadow-md">
+    <nav 
+      className="fixed top-0 left-0 w-full p-4 z-50 shadow-md"
+      style={{
+        background: `linear-gradient(to right, white calc(200px), #3D65AF)`, // Gradient styl
+      }}
+    >
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
@@ -54,6 +59,11 @@ const Navbar: React.FC = () => {
               Poptávka
             </button>
           </Link>
+          <Link href="/interior">
+            <button className="text-black block w-full text-center px-4 py-2 rounded hover:bg-gray-100 transition font-poppins">
+              Interiéry na dálku
+            </button>
+          </Link>
           <Link href="/blog">
             <button className="text-black block w-full text-center px-4 py-2 rounded hover:bg-gray-100 transition font-poppins">
               Blog
@@ -87,6 +97,11 @@ const Navbar: React.FC = () => {
         <Link href="/form">
           <button className="text-black block w-full text-center px-4 py-2 rounded hover:bg-gray-100 transition font-poppins">
             Poptávka
+          </button>
+        </Link>
+        <Link href="/interior">
+          <button className="text-black block w-full text-center px-4 py-2 rounded hover:bg-gray-100 transition font-poppins">
+            Interiéry na dálku
           </button>
         </Link>
         <Link href="/blog">

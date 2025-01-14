@@ -6,31 +6,31 @@ import Navbar from '../components/Navbar'; // Adjust the import path as needed
 import Footer from '../components/Footer'; // Adjust the import path as needed
 
 const GalleryPage: React.FC = () => {
-  // Example image data
+  // Example image data with captions
   const visualizationImages = [
-    '/viz1.jpg',
-    '/viz2.jpg',
-    '/viz3.jpg',
-    '/viz4.jpg',
-    '/viz5.jpg',
-    '/viz6.jpg',
-    '/viz7.jpg',
-    '/viz8.jpg',
-    '/viz9.jpg',
-    '/viz10.jpg',
+    { src: '/viz1.jpg', caption: 'Moderní interiérový design' },
+    { src: '/viz2.jpg', caption: 'Kuchyňská linka s minimalistickým nádechem' },
+    { src: '/viz3.jpg', caption: 'Prostorný obývací pokoj' },
+    { src: '/viz4.jpg', caption: 'Návrh exteriéru rodinného domu' },
+    { src: '/viz5.jpg', caption: 'Elegantní kancelářský prostor' },
+    { src: '/viz6.jpg', caption: 'Ložnice s výhledem na přírodu' },
+    { src: '/viz7.jpg', caption: 'Detail kuchyňského ostrova' },
+    { src: '/viz8.jpg', caption: 'Moderní koupelna' },
+    { src: '/viz9.jpg', caption: 'Design obývacího prostoru s krbem' },
+    { src: '/viz10.jpg', caption: 'Návrh terasy s pergolou' },
   ];
 
   const photographyImages = [
-    '/photo1.jpg',
-    '/photo2.jpg',
-    '/photo3.jpg',
-    '/photo4.jpg',
-    '/photo5.jpg',
-    '/photo6.jpg',
-    '/photo7.jpg',
-    '/photo8.jpg',
-    '/photo9.jpg',
-    '/photo10.jpg',
+    { src: '/photo1.jpg', caption: 'Krajina při západu slunce' },
+    { src: '/photo2.jpg', caption: 'Detailní záběr květiny' },
+    { src: '/photo3.jpg', caption: 'Městská scenérie v noci' },
+    { src: '/photo4.jpg', caption: 'Vesnická idyla na jaře' },
+    { src: '/photo5.jpg', caption: 'Portrétní fotografie v přírodě' },
+    { src: '/photo6.jpg', caption: 'Architektonický detail moderní budovy' },
+    { src: '/photo7.jpg', caption: 'Záběr divoké přírody' },
+    { src: '/photo8.jpg', caption: 'Historická ulička města' },
+    { src: '/photo9.jpg', caption: 'Panorama hor' },
+    { src: '/photo10.jpg', caption: 'Noční obloha plná hvězd' },
   ];
 
   return (
@@ -44,16 +44,20 @@ const GalleryPage: React.FC = () => {
             <h1 className="text-3xl text-gray-800 text-center mb-8 font-poppins">
               Galerie vizualizací
             </h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {visualizationImages.map((image, index) => (
-                <div key={index} className="w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16">
+              {visualizationImages.map((item, index) => (
+                <div
+                  key={index}
+                  className="w-full text-center" // Bez mezer mezi obrázkem a textem
+                >
                   <Image 
-                    src={image}
+                    src={item.src}
                     alt={`Vizualizace ${index + 1}`}
                     className="rounded-lg shadow-md w-full h-full object-cover"
                     width={200}
                     height={200}
                   />
+                  <p className="text-sm text-gray-600 mt-2">{item.caption}</p> {/* Minimální mezera */}
                 </div>
               ))}
             </div>
@@ -64,16 +68,20 @@ const GalleryPage: React.FC = () => {
             <h1 className="text-3xl text-gray-800 text-center mb-8 font-poppins">
               Galerie fotografií
             </h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {photographyImages.map((image, index) => (
-                <div key={index} className="w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16">
+              {visualizationImages.map((item, index) => (
+                <div
+                  key={index}
+                  className="w-full text-center" // Bez mezer mezi obrázkem a textem
+                >
                   <Image 
-                    src={image}
-                    alt={`Fotografie ${index + 1}`}
+                    src={item.src}
+                    alt={`Vizualizace ${index + 1}`}
                     className="rounded-lg shadow-md w-full h-full object-cover"
                     width={200}
                     height={200}
                   />
+                  <p className="text-sm text-gray-600 mt-2">{item.caption}</p> {/* Minimální mezera */}
                 </div>
               ))}
             </div>
