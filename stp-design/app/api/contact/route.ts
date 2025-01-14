@@ -18,7 +18,7 @@ export async function POST(req: Request) {
   // Nastavení e-mailu
   const mailOptions = {
     from: email, // Odesílatel je e-mail z formuláře
-    to: 'vasarichtar@icloud.com', // Kam se má e-mail poslat
+    to: 'stpdesigncz@gmail.com', // Kam se má e-mail poslat
     subject: `Nová zpráva od ${firstName} ${lastName}`,
     text: `
       Jméno: ${firstName} ${lastName}

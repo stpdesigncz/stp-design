@@ -35,7 +35,7 @@ const RequestFormPage = () => {
       const selectedFiles = Array.from(e.target.files);
       setFormData((prev) => ({
         ...prev,
-        files: [...prev.files, ...selectedFiles], // Přidáme nové soubory k existujícím
+        files: [...prev.files, ...selectedFiles],
       }));
     }
   };
@@ -50,7 +50,7 @@ const RequestFormPage = () => {
     form.append('phone', formData.phone);
     form.append('city', formData.city);
     form.append('message', formData.message);
-    formData.files.forEach((file) => form.append('files', file)); // Přidání všech souborů
+    formData.files.forEach((file) => form.append('files', file));
 
     try {
       const response = await fetch('/api/request', {
@@ -70,9 +70,7 @@ const RequestFormPage = () => {
     }
   };
 
-  // Funkce pro úpravu přípony souboru
   const formatFileName = (fileName: string) => {
-    // Pokud je přípona .jfif, přejmenujeme ji na .jpg
     return fileName.replace(/\.jfif$/i, '.jpg');
   };
 
@@ -83,7 +81,6 @@ const RequestFormPage = () => {
         <h1 className="text-3xl font-bold mb-8 text-center">Poptávkový formulář</h1>
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="name" className="block text-sm font-medium">Jméno</label>
             <input
               type="text"
               id="name"
@@ -91,11 +88,11 @@ const RequestFormPage = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full border rounded px-4 py-2"
+              placeholder="Jméno"
+              className="w-full border rounded px-4 py-2 placeholder-gray-500"
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium">Email</label>
             <input
               type="email"
               id="email"
@@ -103,11 +100,11 @@ const RequestFormPage = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full border rounded px-4 py-2"
+              placeholder="Email"
+              className="w-full border rounded px-4 py-2 placeholder-gray-500"
             />
           </div>
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium">Telefon</label>
             <input
               type="tel"
               id="phone"
@@ -115,11 +112,11 @@ const RequestFormPage = () => {
               value={formData.phone}
               onChange={handleChange}
               required
-              className="w-full border rounded px-4 py-2"
+              placeholder="Telefon"
+              className="w-full border rounded px-4 py-2 placeholder-gray-500"
             />
           </div>
           <div>
-            <label htmlFor="city" className="block text-sm font-medium">Město</label>
             <input
               type="text"
               id="city"
@@ -127,36 +124,35 @@ const RequestFormPage = () => {
               value={formData.city}
               onChange={handleChange}
               required
-              className="w-full border rounded px-4 py-2"
+              placeholder="Město"
+              className="w-full border rounded px-4 py-2 placeholder-gray-500"
             />
           </div>
           <div>
-            <label htmlFor="message" className="block text-sm font-medium">Zpráva</label>
             <textarea
               id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
               required
-              className="w-full border rounded px-4 py-2"
+              placeholder="Zpráva"
+              className="w-full border rounded px-4 py-2 placeholder-gray-500"
             ></textarea>
           </div>
           <div>
-            <label htmlFor="files" className="block text-sm font-medium">Přetáhněte nebo vložte soubory</label>
-            <div className="flex items-center gap-4">
-              <input
-                type="file"
-                id="files"
-                name="files"
-                multiple // Důležité: Umožňuje výběr více souborů
-                onChange={handleFileChange}
-              />
-              <div className="text-sm text-gray-600">
-                {formData.files.length > 0 &&
-                  (formData.files.length <= 3
-                    ? formData.files.map((file) => formatFileName(file.name)).join(', ')
-                    : `${formData.files.slice(0, 3).map((file) => formatFileName(file.name)).join(', ')},...`)}
-              </div>
+            <input
+              type="file"
+              id="files"
+              name="files"
+              multiple
+              onChange={handleFileChange}
+              className="w-full"
+            />
+            <div className="text-sm text-gray-600 mt-2">
+              {formData.files.length > 0 &&
+                (formData.files.length <= 3
+                  ? formData.files.map((file) => formatFileName(file.name)).join(', ')
+                  : `${formData.files.slice(0, 3).map((file) => formatFileName(file.name)).join(', ')},...`)}
             </div>
           </div>
           <button

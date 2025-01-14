@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
     // Nastavení e-mailu
     const mailOptions = {
       from: email, // Odesílatel
-      to: 'vasarichtar@icloud.com', // Příjemce
+      to: 'stpdesigncz@gmail.com', // Příjemce
       subject: `Nová zpráva od ${name}`,
       text: `
         Jméno: ${name}
