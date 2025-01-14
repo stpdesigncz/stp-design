@@ -78,7 +78,7 @@ const RequestFormPage = () => {
     <div>
       <Navbar />
       <main className="max-w-4xl mx-auto py-40 px-4">
-        <h1 className="text-3xl font-bold mb-8 text-center">Poptávkový formulář</h1>
+        <h1 className="text-3xl mb-8 text-center">Poptávkový formulář</h1>
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
             <input

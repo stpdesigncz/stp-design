@@ -47,7 +47,7 @@ const BlogPage = () => {
             >
               &times;
             </button>
-            <h2 className="text-2xl font-semibold mb-4">{blogTopics[activeTopic].title}</h2>
+            <h2 className="text-3xl mb-4">{blogTopics[activeTopic].title}</h2>
             {blogTopics[activeTopic].content.split('\n\n').map((paragraph, idx) => (
               <p key={idx} className="mb-4">
                 {paragraph}

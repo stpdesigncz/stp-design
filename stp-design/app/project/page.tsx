@@ -57,7 +57,7 @@ const ProjectPage: React.FC = () => {
               </div>
               {/* Text Section */}
               <div className="w-full md:w-1/2">
-                <h1 className="text-3xl font-semibold text-gray-800 mb-4 font-poppins md:text-center">
+                <h1 className="text-3xl text-gray-800 mb-4 font-poppins md:text-center">
                   {project.title}
                 </h1>
                 <p className="text-gray-600 font-poppins md:text-center">

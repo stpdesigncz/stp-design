@@ -41,7 +41,7 @@ const GalleryPage: React.FC = () => {
         <div className="container mx-auto px-4 md:px-8">
           {/* Visualizations Gallery */}
           <section className="mb-16">
-            <h1 className="text-3xl font-semibold text-gray-800 text-center mb-8 font-poppins">
+            <h1 className="text-3xl text-gray-800 text-center mb-8 font-poppins">
               Galerie vizualizací
             </h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -61,7 +61,7 @@ const GalleryPage: React.FC = () => {
 
           {/* Photography Gallery */}
           <section>
-            <h1 className="text-3xl font-semibold text-gray-800 text-center mb-8 font-poppins">
+            <h1 className="text-3xl text-gray-800 text-center mb-8 font-poppins">
               Galerie fotografií
             </h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

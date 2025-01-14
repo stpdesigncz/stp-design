@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
     <section className="pt-16 pb-32">
       <div className="container mx-auto text-center">
         {/* Text nahoře */}
-        <h1 className="text-3xl font- text-gray-800 mb-4 font-poppins">CO DĚLÁME</h1>
+        <h1 className="text-3xl  text-gray-800 mb-4 font-poppins">CO DĚLÁME</h1>
         <p className="text-gray-600 mb-8 font-poppins">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut nisl nec mi vehicula feugiat.
         </p>

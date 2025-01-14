@@ -34,7 +34,7 @@ const references = [
 
 const ReferenceCard = ({ title, location, description }: { title: string; location: string; description: string }) => (
   <div className="border rounded-lg shadow-lg p-6 mb-6">
-    <h2 className="text-xl font-semibold mb-2">{title}</h2>
+    <h2 className="text-xl mb-2">{title}</h2>
     <p className="text-gray-600 mb-2"><strong>Místo realizace:</strong> {location}</p>
     <p>{description}</p>
   </div>
