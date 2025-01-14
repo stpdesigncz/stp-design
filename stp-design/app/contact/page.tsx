@@ -71,7 +71,7 @@ const Contact = () => {
                   width={200}
                   height={200}
                 />
-                <p className="mt-4 font-semibold text-gray-800">Pavla Horutová</p>
+                <p className="mt-4 font-semibold text-gray-800">Pavla Stebelaková</p>
                 <p className="text-gray-600">Email: pavla@example.com</p>
                 <p className="text-gray-600">Telefon: +420 123 456 789</p>
               </div>

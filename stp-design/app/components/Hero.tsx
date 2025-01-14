@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
               alt="Majitelka 1"
               className="w-32 h-32 rounded-full mx-auto"
             />
-            <p className="mt-4 font-semibold text-gray-800">Pavla Horutová</p>
+            <p className="mt-4 font-semibold text-gray-800">Pavla Stebelaková</p>
             <p className="text-gray-600 mt-2 text-sm">
               Specialistka na marketing a komunikaci.
             </p>
