@@ -144,7 +144,7 @@ const RequestFormPage = () => {
             </div>
             <div className="border p-4 rounded shadow-lg text-center">
               <h3 className="text-xl font-medium">Chodba / Vstupní prostor</h3>
-              <p className="mt-2 text-lg font-bold text-blue-500">10.000 - 30.000 Kč</p>
+              <p className="mt-2 text-lg font-bold text-blue-500">10.000 - 35.000 Kč</p>
             </div>
             <div className="border p-4 rounded shadow-lg text-center">
               <h3 className="text-xl font-medium">Koupelna / WC</h3>
