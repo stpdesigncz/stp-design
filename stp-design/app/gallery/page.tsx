@@ -69,7 +69,7 @@ const GalleryPage: React.FC = () => {
               Galerie fotografií
             </h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16">
-              {visualizationImages.map((item, index) => (
+              {photographyImages.map((item, index) => (
                 <div
                   key={index}
                   className="w-full text-center" // Bez mezer mezi obrázkem a textem
