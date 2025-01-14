@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link'; // Přidán import Link
+import Image from 'next/image'; // Importujeme Image komponentu
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +22,13 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <Link href="/">
           <div className="text-white text-lg font-bold">
-            <img src="/logo.png" alt="Logo" className="h-8" />
+            <Image 
+              src="/logo.png" 
+              alt="Logo" 
+              width={130} // Nastav skutečnou šířku loga (pokud víš)
+              height={30} // Nastav skutečnou výšku loga (pokud víš)
+              className="object-contain" // Tímto způsobem bude logo zachovávat své proporce
+            />
           </div>
         </Link>
         {/* Burger menu button */}
